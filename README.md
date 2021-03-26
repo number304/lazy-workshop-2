@@ -1,31 +1,12 @@
-# Snowpack Tailwind
+# Random Fox Plugin with Lazy Loading
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 
-Ready-to-go template to create awesome websites using Tailwind on top of Snowpack and autopublish to GitHub pages using GitHub Actions.
+Web Sample of a random generator of fox images. Just a practice about DOM manipulation.
 
 - [Quick start](#quick-start)
 - [Features](#features)
 - [Available Scripts](#available-scripts)
-
-## Quick start
-
-```sh
-npx create-snowpack-app my-app --template snowpack-template-tailwind
-```
-
-It bootstraps this template into a new folder called `my-app/`.
-
-✨ Every commit pushed to your `main` branch will autopublish the site on GitHub Pages.
-
-
-#### Optional install using Yarn:
-
-```sh
-npx create-snowpack-app my-app --template snowpack-template-tailwind --use-yarn
-```
-
-
 
 ## Features
 
@@ -65,7 +46,3 @@ Builds a static copy of your site to the `build/` folder.
 Your app is ready to be deployed!
 
 **For the best production performance:** Add a build bundler plugin like [@snowpack/plugin-webpack](https://github.com/snowpackjs/snowpack/tree/master/plugins/plugin-webpack) or [snowpack-plugin-rollup-bundle](https://github.com/ParamagicDev/snowpack-plugin-rollup-bundle) to your `snowpack.config.json` config file.
-
-### Q: What about Eject?
-
-No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
