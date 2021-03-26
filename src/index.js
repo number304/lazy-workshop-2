@@ -10,16 +10,26 @@ const createImageNode = () => {
     const imagen = document.createElement('img')
     imagen.className = 'mx-auto'
     imagen.width = '320'
-    imagen.src = `https://randomfox.ca/images/${random()}.jpg`
+    imagen.dataset.src = `https://randomfox.ca/images/${random()}.jpg`
 
-    container.appendChild(imagen)
+    const imageWrapper = document.createElement('div')
+    imageWrapper.className = 'bg-gray-300'
+    imageWrapper.style.minHeight = '100px'
+    imageWrapper.style.display = 'inline-block'
+
+    imageWrapper.appendChild(imagen)
+    container.appendChild(imageWrapper)
+
+    appendedImages++;
+    printLog();
 
     return container
 }
 
 const mountNode = document.getElementById('images')
 
-const addButton = document.querySelector('button')
+const addButton = document.querySelector('.addImage')
+const cleanButton = document.querySelector('.cleanImages')
 
 const addImage = () => {
     const newImage = createImageNode()
@@ -27,4 +37,9 @@ const addImage = () => {
     registerImage(newImage)
 }
 
+const cleanImages = () => {
+    [...mountNode.childNodes].forEach(child => child.remove())
+}
+
 addButton.addEventListener('click', addImage)
+cleanButton.addEventListener('click', cleanImages)
